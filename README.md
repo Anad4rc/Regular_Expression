@@ -45,12 +45,13 @@ https://www.w3.org/Addressing/URL/url-spec.html envolve muitas possibilidades).
 + ***n{x, }***: pelo menos x ocorrencias de n
 
 ## Obervações 📌
-Embora a forma de construir as expressões regulares possam variar, dependendo da linguagem de programação utilizada, podemos citar alguns metacaracteres básicos de uma expressão:
 
 + ***\n*** quebra de linha
 + ***\t*** tabulação
 + ***\b*** backspace
 + ***\r*** cursor retorno
+
+◽ O ***Método matches()*** =especifica uma expressão regular e localiza o conteúdo do objeto String em que está sendo aplicada essa expressão.
 
 ## Explicação para cada simbolo usado nas verificações 📌
 
@@ -85,7 +86,7 @@ public static boolean validar_placa_carro(String placa) {
 + ***{3}*** significa que o padrão anterior/letra maiúscula deve ocorrer exatamente 3 vezes.
 + ***-*** corresponde ao caractere de hífen literal ("-").
 + ***\\d{4}*** significa que o padrão anterior/dígito deve ocorrer exatamente 4 vezes.
-+ ***|*** representa o ***ou***, ou seja, a expressão aceita o formato antigo de placa (AAA-####) ***ou*** o novo (AAA1A22).("A" representa uma letra maiúscula e "#" representa um dígito).
++ ***|*** representa o ***ou***, ou seja, a expressão aceita o formato antigo de placa (AAA-####) ***ou*** o novo (AAA#A##).("A" representa uma letra maiúscula e "#" representa um dígito).
 
 ## ✔ Verificar número de telefone
 
