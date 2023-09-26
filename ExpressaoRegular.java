@@ -2,32 +2,36 @@ import java.util.Scanner;
 
 public class ExpressaoRegular {
 	
-	//metodo para verificar se o numero digitado tem o padrão de um CPF
+	//metodo para verificar se o numero digitado tem o padrão de um CPF - ddd.ddd.ddd-dd
 	public static boolean validar_CPF(String CPF) {
 		
 		String ER_cpf = "\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}";
 		return CPF.matches(ER_cpf);
 	}
 	
-	//metodo que verifica se a entrada é uma numeração de placa valida
+	//metodo que verifica se a entrada é uma numeração de placa valida 
+	//placa antiga (AAA-####), placa novo (AAA#A##)
 	public static boolean validar_placa_carro(String placa) {
 		String ER_placa_carro = "[A-Z]{3}-\\d{4}|[A-Z]{3}\\d[A-Z]\\d{2}";
 		return placa.matches(ER_placa_carro);
 	}
 	
 	//metodo que verifica se o numero digitado segue o padrão de um numero de telefone fixo ou movel
+	//fixo: (DD) DDDDD-DDDD ou movel: (DD) DDDDD-DDDDD
 	public static boolean validar_telefone(String telefone) {
 		String ER_telefone = "\\(\\d{2}\\) \\d{4,5}-\\d{4}|\\(\\d{2}\\) \\d{4}-\\d{4,5}";
 		return telefone.matches(ER_telefone);
 	}
 	
 	//metodo para verificar se o email digitado pelo usuario é valido
+	//alunoufpb@gmail.com
 	public static boolean validar_email(String email) {
 		String ER_email = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}";
 		return email.matches(ER_email);
 	}
 	
 	//metodo utilizado para verificar se a url do site é valida
+	//https://www.w3.org/Addressing/URL/url-spec.html
 	public static boolean validar_URL(String url) {
 		String ER_url = "^(http|https)://[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}(/\\S*)?$";
 		return url.matches(ER_url);
