@@ -44,7 +44,7 @@ https://www.w3.org/Addressing/URL/url-spec.html envolve muitas possibilidades).
 + ***n{x,y}***: x á y ocorrencias de n
 + ***n{x, }***: pelo menos x ocorrencias de n
 
-## Obervações
+## Obervações 📌
 Embora a forma de construir as expressões regulares possam variar, dependendo da linguagem de programação utilizada, podemos citar alguns metacaracteres básicos de uma expressão:
 
 + ***\n*** quebra de linha
@@ -52,7 +52,7 @@ Embora a forma de construir as expressões regulares possam variar, dependendo d
 + ***\b*** backspace
 + ***\r*** cursor retorno
 
-## Explicação para cada simbolo usado nas verificações
+## Explicação para cada simbolo usado nas verificações 📌
 
 🚨 ***//*** = escape, tudo que vem antes dele significa literalmente o caractere
 
@@ -71,6 +71,8 @@ public static boolean validar_CPF(String CPF) {
 + ***\\.*** corresponde ao caractere de ponto literal (".").
 + ***-*** corresponde ao caractere de hífen literal ("-").
 + ***\\d{2}*** significa que o padrão anterior (dígito) deve ocorrer exatamente 2 vezes.
+
+***✔ Verificação da numeração da placa do carro***
 
  ```java
 public static boolean validar_placa_carro(String placa) {
