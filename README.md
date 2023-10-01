@@ -61,7 +61,6 @@ https://www.w3.org/Addressing/URL/url-spec.html envolve muitas possibilidades).
 
 ```java
 public static boolean validar_CPF(String CPF) {
-		
 		String ER_cpf = "\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}";
 		return CPF.matches(ER_cpf);
 	}
@@ -92,7 +91,7 @@ public static boolean validar_placa_carro(String placa) {
 
 ```java
 public static boolean validar_telefone(String telefone) {
-		String ER_telefone = "\\(\\d{2}\\) \\d{4,5}-\\d{4}|\\(\\d{2}\\) \\d{4}-\\d{4,5}";
+        String ER_telefone = "\\(\\d{2}\\)\\d{4}-\\d{4}|\\(\\d{2}\\)\\d{9}";
 		return telefone.matches(ER_telefone);
 	}
 ```
@@ -104,7 +103,7 @@ public static boolean validar_telefone(String telefone) {
 + ***\\d{4,5}*** significa que o padrão anterior/dígito deve ocorrer entre 4 e 5 vezes.
 + ***-*** corresponde ao caractere de hífen literal ("-").
 + | representa o ***ou***, ou seja, a expressão aceita números de telefone com 4 ou 5 dígitos após o DDD.
-Expressão regular valida números de telefone no formato "***(DD) DDDDD-DDDD***" ou "***(DD) DDDDD-DDDDD***", onde "***DD***" representa o código de área e "***D***" representa um dígito.
+Expressão regular valida números de telefone no formato "***(DD) DDDD-DDDD***" ou "***(DD) DDDDDDDDD***", onde "***DD***" representa o código de área e "***D***" representa um dígito.
 
 ## ✔ Verificar E-mail
 
